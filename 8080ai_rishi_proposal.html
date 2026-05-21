@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8080.ai × Rishi Jain — Brand Deal Proposal</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --black: #0a0a0a;
+    --off-white: #f5f3ee;
+    --cream: #ede9e0;
+    --accent: #c8f135;
+    --accent-dark: #9ab820;
+    --muted: #6b6b6b;
+    --border: rgba(0,0,0,0.1);
+    --card-bg: #ffffff;
+    --tag-bg: #1a1a1a;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--off-white);
+    color: var(--black);
+    font-size: 15px;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* HEADER */
+  .hero {
+    background: var(--black);
+    color: var(--off-white);
+    padding: 80px 48px 72px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    border: 1px solid rgba(200, 241, 53, 0.15);
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    top: -20px; right: -20px;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    border: 1px solid rgba(200, 241, 53, 0.1);
+  }
+  .hero-inner { max-width: 900px; margin: 0 auto; position: relative; z-index: 1; }
+  .hero-label {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid rgba(200,241,53,0.4);
+    padding: 5px 14px;
+    border-radius: 100px;
+    margin-bottom: 28px;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+  }
+  .hero h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(42px, 7vw, 80px);
+    font-weight: 800;
+    line-height: 1.0;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+  }
+  .hero h1 span { color: var(--accent); }
+  .hero-sub {
+    font-size: 16px;
+    color: rgba(245,243,238,0.55);
+    font-weight: 300;
+    max-width: 480px;
+    letter-spacing: 0.01em;
+  }
+  .hero-meta {
+    display: flex;
+    gap: 32px;
+    margin-top: 48px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    flex-wrap: wrap;
+  }
+  .hero-meta-item { display: flex; flex-direction: column; gap: 4px; }
+  .hero-meta-item .val {
+    font-family: 'Syne', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--off-white);
+  }
+  .hero-meta-item .lbl {
+    font-size: 11px;
+    color: rgba(245,243,238,0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  /* LAYOUT */
+  .page { max-width: 900px; margin: 0 auto; padding: 64px 48px; }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* STATS GRID */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 56px;
+  }
+  .stat-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .stat-card:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.08); }
+  .stat-card .big {
+    font-family: 'Syne', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--black);
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-card .desc {
+    font-size: 12px;
+    color: var(--muted);
+    font-weight: 400;
+  }
+  .stat-card .accent-dot {
+    position: absolute;
+    top: 16px; right: 16px;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  /* AUDIENCE */
+  .audience-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 56px;
+  }
+  .aud-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px;
+  }
+  .aud-card h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 20px;
+    color: var(--muted);
+  }
+  .bar-row { margin-bottom: 14px; }
+  .bar-row .label-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+  .bar-row .label-row span:first-child { color: var(--black); }
+  .bar-row .label-row span:last-child { font-weight: 500; color: var(--black); }
+  .bar-track {
+    height: 5px;
+    background: var(--cream);
+    border-radius: 100px;
+    overflow: hidden;
+  }
+  .bar-fill {
+    height: 100%;
+    background: var(--black);
+    border-radius: 100px;
+    transition: width 1s ease;
+  }
+  .gender-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .gender-pill {
+    flex: 1;
+    border-radius: 12px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .gender-pill.men { background: var(--black); color: var(--off-white); }
+  .gender-pill.women { background: var(--cream); color: var(--black); }
+  .gender-pill .g-pct {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .gender-pill .g-label { font-size: 11px; opacity: 0.6; text-transform: uppercase; letter-spacing: 0.08em; }
+  .city-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .city-row:last-child { border-bottom: none; }
+  .city-row span:last-child { color: var(--muted); font-weight: 400; }
+
+  /* USP */
+  .usp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 56px;
+  }
+  .usp-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    transition: border-color 0.2s ease;
+  }
+  .usp-card:hover { border-color: var(--accent-dark); }
+  .usp-icon {
+    width: 40px; height: 40px;
+    background: var(--cream);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 18px;
+  }
+  .usp-card h4 {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  .usp-card p { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+  /* PLANS */
+  .plans-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 56px;
+    align-items: start;
+  }
+  .plan-card {
+    border-radius: 20px;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .plan-card.basic {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+  }
+  .plan-card.recommended {
+    background: var(--black);
+    color: var(--off-white);
+  }
+  .plan-badge {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: var(--accent);
+    color: var(--black);
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .plan-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    opacity: 0.45;
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+  .plan-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 4px;
+    line-height: 1.1;
+  }
+  .plan-sub { font-size: 13px; opacity: 0.5; margin-bottom: 24px; }
+  .plan-divider {
+    height: 1px;
+    background: rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+  }
+  .plan-card.recommended .plan-divider { background: rgba(255,255,255,0.1); }
+  .price-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  .price-row .price-label { opacity: 0.55; }
+  .price-row .price-val { font-weight: 500; }
+  .price-total {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Syne', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(0,0,0,0.08);
+  }
+  .plan-card.recommended .price-total { border-top-color: rgba(255,255,255,0.1); }
+  .savings-tag {
+    display: inline-block;
+    background: rgba(200,241,53,0.15);
+    color: var(--accent);
+    border: 1px solid rgba(200,241,53,0.3);
+    font-size: 11px;
+    padding: 4px 10px;
+    border-radius: 100px;
+    margin-top: 10px;
+  }
+  .content-box {
+    margin-top: 20px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 16px 18px;
+  }
+  .plan-card.basic .content-box { background: var(--cream); }
+  .content-box .cb-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.5;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .content-box p {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-bottom: 5px;
+    padding-left: 12px;
+    position: relative;
+  }
+  .content-box p::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    opacity: 0.4;
+  }
+  .content-box p:last-child { margin-bottom: 0; }
+
+  /* INCLUSIONS */
+  .inclusions {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 32px;
+    margin-bottom: 56px;
+  }
+  .inclusions h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .inclusions-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+  }
+  .inclusion-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--black);
+  }
+  .inclusion-item .tick {
+    width: 18px; height: 18px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+    font-size: 10px;
+    font-weight: 700;
+  }
+
+  /* PRICING NOTES */
+  .notes {
+    background: var(--black);
+    color: var(--off-white);
+    border-radius: 20px;
+    padding: 32px;
+    margin-bottom: 56px;
+  }
+  .notes h3 {
+    font-family: 'Syne', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--accent);
+  }
+  .note-item {
+    display: flex;
+    gap: 14px;
+    font-size: 13px;
+    color: rgba(245,243,238,0.65);
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  .note-item::before {
+    content: '↗';
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* FOOTER */
+  .footer {
+    border-top: 1px solid var(--border);
+    padding-top: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: var(--muted);
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .footer a { color: var(--black); text-decoration: none; font-weight: 500; }
+
+  @media (max-width: 700px) {
+    .hero { padding: 52px 24px 52px; }
+    .page { padding: 40px 24px; }
+    .stats-grid { grid-template-columns: 1fr 1fr; }
+    .audience-grid, .usp-grid, .plans-grid { grid-template-columns: 1fr; }
+    .inclusions-grid { grid-template-columns: 1fr 1fr; }
+    .hero-meta { gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-label">Brand Deal Proposal · 2025</div>
+    <h1>8080.ai<br><span>×</span> Rishi Jain</h1>
+    <p class="hero-sub">Instagram Reels partnership to drive signups for 8080.ai through India's leading AI educator.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="val">250K</span>
+        <span class="lbl">Instagram followers</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="val">4.3M</span>
+        <span class="lbl">Monthly views</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="val">213K</span>
+        <span class="lbl">Monthly interactions</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="val">150K+</span>
+        <span class="lbl">Students trained</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+  <div class="section-label">Profile overview</div>
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="accent-dot"></div>
+      <div class="big">250K</div>
+      <div class="desc">Instagram followers</div>
+    </div>
+    <div class="stat-card">
+      <div class="accent-dot"></div>
+      <div class="big">4.3M</div>
+      <div class="desc">Monthly content views</div>
+    </div>
+    <div class="stat-card">
+      <div class="accent-dot"></div>
+      <div class="big">213K</div>
+      <div class="desc">Monthly interactions</div>
+    </div>
+    <div class="stat-card">
+      <div class="accent-dot"></div>
+      <div class="big">21.7K</div>
+      <div class="desc">New followers/month</div>
+    </div>
+  </div>
+
+  <div class="section-label">Audience insights</div>
+  <div class="audience-grid">
+    <div class="aud-card">
+      <h3>Age breakdown</h3>
+      <div class="bar-row">
+        <div class="label-row"><span>25–34</span><span>45.3%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:45.3%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="label-row"><span>18–24</span><span>29.5%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:29.5%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="label-row"><span>35–44</span><span>17.3%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:17.3%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="label-row"><span>45–54</span><span>5.0%</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:5%"></div></div>
+      </div>
+    </div>
+    <div class="aud-card">
+      <h3>Gender &amp; location</h3>
+      <div class="gender-row">
+        <div class="gender-pill men">
+          <span class="g-pct">73.9%</span>
+          <span class="g-label">Men</span>
+        </div>
+        <div class="gender-pill women">
+          <span class="g-pct">26.1%</span>
+          <span class="g-label">Women</span>
+        </div>
+      </div>
+      <div class="city-row"><span>Bangalore</span><span>7.4%</span></div>
+      <div class="city-row"><span>Chennai</span><span>5.1%</span></div>
+      <div class="city-row"><span>Delhi</span><span>4.5%</span></div>
+      <div class="city-row"><span>Mumbai</span><span>4.3%</span></div>
+      <div class="city-row"><span>India overall</span><span>79.9%</span></div>
+    </div>
+  </div>
+
+  <div class="section-label">8080.ai USPs — content angles</div>
+  <div class="usp-grid">
+    <div class="usp-card">
+      <div class="usp-icon">🛌</div>
+      <div>
+        <h4>Zero-touch development</h4>
+        <p>Set a prompt, walk away. Agents code while you sleep — no laptop needed after the first instruction.</p>
+      </div>
+    </div>
+    <div class="usp-card">
+      <div class="usp-icon">⚙️</div>
+      <div>
+        <h4>Kubernetes-ready deployment</h4>
+        <p>Production-grade infra out of the box — Helm charts, Docker, horizontal autoscaling from commit one.</p>
+      </div>
+    </div>
+    <div class="usp-card">
+      <div class="usp-icon">🧠</div>
+      <div>
+        <h4>100M token context</h4>
+        <p>Six agents in parallel, full codebase awareness, no hallucination or lost threads across massive projects.</p>
+      </div>
+    </div>
+    <div class="usp-card">
+      <div class="usp-icon">🎁</div>
+      <div>
+        <h4>Unlimited refer &amp; earn</h4>
+        <p>Built-in virality — followers try free via Rishi's referral, earn credits, product sells itself through community.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label">Partnership plans</div>
+  <div class="plans-grid">
+
+    <div class="plan-card basic">
+      <div class="plan-label">Plan A</div>
+      <div class="plan-name">1-month<br>deal</div>
+      <div class="plan-sub">3 reels · 30-day window</div>
+      <div class="plan-divider"></div>
+      <div class="price-row"><span class="price-label">Per reel (base rate)</span><span class="price-val">₹25,000</span></div>
+      <div class="price-row"><span class="price-label">3 reels subtotal</span><span class="price-val">₹75,000</span></div>
+      <div class="price-row"><span class="price-label">Ad rights (30 days, 30%)</span><span class="price-val">₹22,500</span></div>
+      <div class="price-total"><span>Total</span><span>₹97,500</span></div>
+      <div class="content-box">
+        <div class="cb-label">Reel content plan</div>
+        <p>Reel 1 — "I gave 8080 one prompt and went to sleep"</p>
+        <p>Reel 2 — "Your code is in Kubernetes. You didn't write a line."</p>
+        <p>Reel 3 — "Refer, earn credits, build for free"</p>
+      </div>
+    </div>
+
+    <div class="plan-card recommended">
+      <div class="plan-badge">Recommended</div>
+      <div class="plan-label">Plan B</div>
+      <div class="plan-name">3-month<br>deal</div>
+      <div class="plan-sub">9 reels · 90-day window</div>
+      <div class="plan-divider"></div>
+      <div class="price-row"><span class="price-label">Per reel (10% loyalty discount)</span><span class="price-val">₹22,500</span></div>
+      <div class="price-row"><span class="price-label">9 reels subtotal</span><span class="price-val">₹2,02,500</span></div>
+      <div class="price-row"><span class="price-label">Ad rights (90 days, 30%)</span><span class="price-val">₹60,750</span></div>
+      <div class="price-total"><span>Total</span><span>₹2,63,250</span></div>
+      <div class="savings-tag">~₹29,250 saved vs 3× monthly</div>
+      <div class="content-box">
+        <div class="cb-label">3-month content arc</div>
+        <p>Month 1 — Hook &amp; awareness (zero-touch dev angle)</p>
+        <p>Month 2 — Proof &amp; demo (Kubernetes + live build)</p>
+        <p>Month 3 — Community &amp; referral drive</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="inclusions">
+    <h3>What's included in both plans</h3>
+    <div class="inclusions-grid">
+      <div class="inclusion-item"><span class="tick">✓</span><span>Script + concept by Rishi</span></div>
+      <div class="inclusion-item"><span class="tick">✓</span><span>1 revision per reel</span></div>
+      <div class="inclusion-item"><span class="tick">✓</span><span>Reel posted on @rrishijain</span></div>
+      <div class="inclusion-item"><span class="tick">✓</span><span>Branded caption + CTA link</span></div>
+      <div class="inclusion-item"><span class="tick">✓</span><span>Ad usage via Instagram Spark Ads</span></div>
+      <div class="inclusion-item"><span class="tick">✓</span><span>Ad rights for contracted duration</span></div>
+    </div>
+  </div>
+
+  <div class="notes">
+    <h3>Pricing notes</h3>
+    <div class="note-item">Base rate is ₹25,000 per reel, reflecting Rishi's 250K followers, 4.3M monthly views, and proven track record with 8080.ai.</div>
+    <div class="note-item">Ad rights add-on is 30% of content fee per reel, per duration window — standard market rate for influencer usage rights in India.</div>
+    <div class="note-item">3-month deal carries a 10% per-reel discount as a loyalty incentive for a committed campaign over a full quarter.</div>
+    <div class="note-item">Extended ad rights beyond the contracted window: renegotiate at +15% per additional 30-day period.</div>
+    <div class="note-item">Exclusivity (if requested by 8080.ai — no competing AI dev tool deals during the campaign period) carries an additional premium, to be negotiated separately.</div>
+  </div>
+
+  <div class="footer">
+    <span>Prepared for 8080.ai · @rrishijain</span>
+    <span>Contact: <a href="mailto:bde@digitalscholar.in">bde@digitalscholar.in</a> · +91 86104 25655</span>
+  </div>
+
+</div>
+
+</body>
+</html>
